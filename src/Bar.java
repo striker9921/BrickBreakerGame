@@ -38,12 +38,12 @@ public class Bar implements GameItem{
 
   @Override
   public float[] getPos() {
-    return new float[0];
+    return new float[] {posX, posY};
   }
 
   @Override
   public float[] getCenter() {
-    return new float[0];
+    return new float[] {posX + width / 2, posY + height / 2};
   }
 
   @Override

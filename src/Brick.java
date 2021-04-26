@@ -1,7 +1,7 @@
 public class Brick implements GameItem{
 
-  private final float width = 118;
-  private final float height = 62;
+  private final float width = 116;
+  private final float height = 60;
 
   private float posX;
   private float posY;
@@ -20,7 +20,7 @@ public class Brick implements GameItem{
 
   @Override
   public float[] getCenter() {
-    return new float[0];
+    return new float[] {posX + width / 2, posY + height / 2};
   }
 
   public boolean isHit() {
@@ -34,6 +34,10 @@ public class Brick implements GameItem{
 
   @Override
   public void draw() {
+    if(!isHit) {
+      Game.processing.rect(posX, posY, width, height);
+      Game.processing.fill(0);
+    }
 
   }
 
